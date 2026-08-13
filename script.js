@@ -119,33 +119,19 @@ const MENSAJES = [
 
     "Ariana 💕",
 
-    "Quizás fue destino...",
-
-    "o quizás fue casualidad.",
-
     "Pero me alegra haberte encontrado.",
-
-    "Tú haces diferente mi universo.",
 
     "Contigo todo parece más bonito.",
 
     "Eres esa casualidad que no quiero perder.",
 
-    "Mi lugar favorito es donde estás tú.",
-
     "Siempre habrá una estrella que me recuerde a ti.",
-
-    "Tú y yo ✨",
-
-    "Por siempre...",
 
     "Te elegiría una y otra vez. ❤️",
 
     "Mi casualidad favorita.",
 
     "Tú eres mi constelación.",
-
-    "Donde estés tú, quiero estar.",
 
     "A veces el destino tiene nombre.",
 
@@ -159,6 +145,10 @@ const MENSAJES = [
     "💗",
     "💞",
     "💕",
+    "❤️",
+    "❤️",
+    "❤️",
+    "❤️",
     "❤️",
     "❤️",
     "❤️",
