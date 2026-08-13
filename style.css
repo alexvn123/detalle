@@ -1,1 +1,1115 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #020106;
+
+}
+
+
+body {
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    touch-action: none;
+
+}
+
+/* =====================================================
+   PANTALLA INICIAL - ESTILO ELEGANTE
+===================================================== */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(0, 100, 180, 0.10),
+            transparent 35%
+        ),
+        #02030a;
+
+    transition:
+        opacity 1.3s ease,
+        visibility 1.3s ease;
+}
+
+#intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.intro-content {
+    width: 90%;
+    max-width: 650px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: introAppear 1.5s ease;
+}
+
+
+@keyframes introAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   TEXTO SUPERIOR
+===================================================== */
+
+.intro-subtitle {
+
+    color: #dcecff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        0 0 10px rgba(80, 170, 255, .4);
+}
+
+
+/* =====================================================
+   📸 FOTO DE ARIANA
+===================================================== */
+
+.intro-photo {
+
+    width: 190px;
+    height: 220px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #05070d;
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, .25),
+        0 15px 45px rgba(0, 0, 0, .6);
+
+    animation: photoAppear 1.5s ease;
+}
+
+
+.intro-photo img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   PARA TI ARIANA
+===================================================== */
+
+.intro-content h1 {
+
+    margin: 0 0 28px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px, 8vw, 72px);
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 15px rgba(120, 190, 255, .35);
+}
+
+
+/* =====================================================
+   LÍNEA
+===================================================== */
+
+.intro-line {
+
+    width: 110px;
+
+    height: 1px;
+
+    margin-bottom: 30px;
+
+    background: #4da9ff;
+
+    box-shadow:
+        0 0 15px #168cff;
+}
+
+
+/* =====================================================
+   FRASE
+===================================================== */
+
+.intro-text {
+
+    color: #d6dbe5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(17px, 3vw, 22px);
+
+    line-height: 1.8;
+
+    margin: 0 0 42px;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+#enterButton {
+
+    width:
+        min(400px, 85vw);
+
+    height: 72px;
+
+    border:
+        1px solid #3da4ff;
+
+    border-radius: 50px;
+
+    background:
+        rgba(0, 60, 110, .18);
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(0, 130, 255, .15);
+
+    transition:
+        .4s ease;
+}
+
+
+#enterButton:hover {
+
+    transform: scale(1.04);
+
+    background:
+        rgba(0, 100, 180, .25);
+
+    box-shadow:
+        0 0 40px rgba(0, 150, 255, .4);
+}
+
+
+#enterButton b {
+
+    margin-left: 25px;
+
+    color: #69bdff;
+
+    font-size: 24px;
+
+}
+
+
+/* =====================================================
+   AUDÍFONOS
+===================================================== */
+
+.headphones {
+
+    margin-top: 32px;
+
+    color: #727b89;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   UNIVERSO
+===================================================== */
+
+#universe {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        #020106;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transition:
+        opacity 1.5s ease;
+
+}
+
+
+#universe.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+}
+
+
+#galaxyCanvas {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    z-index:
+        1;
+
+}
+
+
+.ambient-light {
+
+    position:
+        absolute;
+
+    width:
+        70vw;
+
+    height:
+        70vw;
+
+    max-width:
+        800px;
+
+    max-height:
+        800px;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 0, 180, .12),
+            transparent 68%
+        );
+
+    filter:
+        blur(35px);
+
+    z-index:
+        2;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   MENSAJES FLOTANTES
+===================================================== */
+
+#floatingMessages {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        8;
+
+    pointer-events:
+        none;
+
+    perspective:
+        1000px;
+
+}
+
+
+.floating-message {
+
+    position:
+        absolute;
+
+    white-space:
+        nowrap;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        serif;
+
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 25px rgba(100, 180, 255, .8);
+
+    animation:
+        floatMessage
+        var(--duration)
+        ease-in-out
+        infinite alternate;
+
+    opacity:
+        var(--opacity);
+
+    transform:
+        translate3d(0,0,var(--depth));
+
+}
+
+
+@keyframes floatMessage {
+
+    0% {
+
+        transform:
+            translate3d(
+                var(--x1),
+                var(--y1),
+                var(--depth)
+            )
+            rotate(
+                var(--rotation)
+            );
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                var(--x2),
+                var(--y2),
+                var(--depth)
+            )
+            rotate(
+                var(--rotation)
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   FOTOS 3D
+===================================================== */
+
+#photoWorld {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        15;
+
+    perspective:
+        1200px;
+
+    pointer-events:
+        none;
+
+}
+
+
+.photo-card {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        150px;
+
+    height:
+        190px;
+
+    padding:
+        5px;
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ff42bb
+        );
+
+    box-shadow:
+
+        0 0 20px
+        rgba(255, 50, 200, .85),
+
+        0 0 65px
+        rgba(255, 0, 180, .4);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform 1.2s cubic-bezier(
+            .2,
+            .8,
+            .2,
+            1
+        ),
+
+        opacity 1s ease;
+
+    overflow:
+        hidden;
+
+}
+
+
+.photo-card img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    border-radius:
+        14px;
+
+}
+
+
+/* =====================================================
+   TÍTULO CENTRAL
+===================================================== */
+
+.center-title {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index:
+        12;
+
+    text-align:
+        center;
+
+    pointer-events:
+        none;
+
+    opacity:
+        .8;
+
+}
+
+
+.center-small {
+
+    color:
+        rgba(255, 190, 230, .75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(11px, 2vw, 15px);
+
+    letter-spacing:
+        8px;
+
+}
+
+
+.center-name {
+
+    margin-top:
+        10px;
+
+    color:
+        rgba(255, 150, 220, .25);
+
+    font-size:
+        clamp(45px, 10vw, 100px);
+
+    letter-spacing:
+        12px;
+
+}
+
+
+/* =====================================================
+   FRASE PRINCIPAL
+===================================================== */
+
+#mainPhrase {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        15%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        90%;
+
+    z-index:
+        30;
+
+    text-align:
+        center;
+
+    pointer-events:
+        none;
+
+}
+
+
+#mainPhrase span {
+
+    color:
+        #ffd0ec;
+
+    font-size:
+        clamp(18px, 4vw, 30px);
+
+    text-shadow:
+
+        0 0 12px
+        #ff27b7,
+
+        0 0 35px
+        rgba(255, 0, 170, .65);
+
+    opacity:
+        0;
+
+    transition:
+        1s;
+
+}
+
+
+#mainPhrase.show span {
+
+    opacity:
+        1;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+===================================================== */
+
+.controls {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        30px;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+    z-index:
+        50;
+
+}
+
+
+.controls button {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        1px solid
+        rgba(255, 100, 210, .7);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(20, 0, 25, .7);
+
+    color:
+        white;
+
+    font-size:
+        30px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.counter {
+
+    color:
+        #d7a9c9;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    letter-spacing:
+        4px;
+
+}
+
+
+.counter i {
+
+    margin:
+        0 5px;
+
+    color:
+        #694f64;
+
+}
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+.music-button {
+
+    position:
+        absolute;
+
+    top:
+        25px;
+
+    right:
+        25px;
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    border:
+        1px solid
+        #ed55bb;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(20, 0, 25, .75);
+
+    color:
+        #ffbce5;
+
+    font-size:
+        28px;
+
+    z-index:
+        100;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 0 30px
+        rgba(255, 0, 180, .3);
+
+}
+
+
+.music-button.playing {
+
+    animation:
+        musicPulse 1.4s infinite;
+
+}
+
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 20px
+            rgba(255, 0, 180, .3);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 55px
+            rgba(255, 0, 180, .8);
+
+    }
+
+}
+
+
+/* =====================================================
+   MENSAJE FINAL
+===================================================== */
+
+#finalScene {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.8);
+
+    width:
+        90%;
+
+    text-align:
+        center;
+
+    z-index:
+        80;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        1.5s;
+
+}
+
+
+#finalScene.show {
+
+    opacity:
+        1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+}
+
+
+.final-subtitle {
+
+    color:
+        #b99aad;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        7px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.final-title {
+
+    color:
+        #ffc4e9;
+
+    font-size:
+        clamp(40px, 9vw, 85px);
+
+    line-height:
+        1.1;
+
+    text-shadow:
+
+        0 0 20px
+        #ff27b7,
+
+        0 0 60px
+        rgba(255, 0, 170, .5);
+
+}
+
+
+.final-name {
+
+    margin-top:
+        30px;
+
+    color:
+        #ff7ac9;
+
+    font-size:
+        23px;
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media(max-width:600px) {
+
+    .intro-subtitle {
+
+        letter-spacing:
+            5px;
+
+    }
+
+
+    .intro-content h1 {
+
+        font-size:
+            60px;
+
+    }
+
+
+    .intro-text {
+
+        font-size:
+            18px;
+
+    }
+
+
+    .photo-card {
+
+        width:
+            105px;
+
+        height:
+            140px;
+
+    }
+
+
+    .floating-message {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .center-name {
+
+        font-size:
+            50px;
+
+        letter-spacing:
+            7px;
+
+    }
+
+
+    .music-button {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+        top:
+            18px;
+
+        right:
+            18px;
+
+    }
+
+    }
