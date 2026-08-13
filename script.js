@@ -1399,61 +1399,6 @@ enterButton.addEventListener(
 );
 
 
-        /* ==========================================
-           MÚSICA
-        ========================================== */
-
-        music.volume =
-            .65;
-
-
-        music.play()
-            .then(
-                () => {
-
-                    musicButton.classList.add(
-                        "playing"
-                    );
-
-                    musicButton.textContent =
-                        "❚❚";
-
-                }
-            )
-            .catch(
-                error => {
-
-                    console.log(
-                        "La música necesita iniciar manualmente:",
-                        error
-                    );
-
-                }
-            );
-
-
-        /* ==========================================
-           EFECTO CÁMARA
-        ========================================== */
-
-        zoomObjetivo =
-            1.25;
-
-
-        setTimeout(
-            () => {
-
-                zoomObjetivo =
-                    1;
-
-            },
-            3500
-        );
-
-    }
-);
-
-
 /* =====================================================
    ⏭ SIGUIENTE FOTO
 ===================================================== */
