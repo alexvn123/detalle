@@ -1331,24 +1331,72 @@ enterButton.addEventListener(
     "click",
     () => {
 
-        console.log(
-            "Entrando al universo..."
-        );
+        /* ==========================================
+           🎬 INICIA TRANSICIÓN CINEMATOGRÁFICA
+        ========================================== */
+
+        intro.classList.add("entering");
 
 
-        intro.classList.add(
-            "hide"
-        );
+        /* ==========================================
+           🎵 INICIA LA MÚSICA
+        ========================================== */
+
+        music.volume = 0.65;
+
+        music.play()
+            .then(() => {
+
+                musicButton.classList.add(
+                    "playing"
+                );
+
+                musicButton.textContent =
+                    "❚❚";
+
+            })
+            .catch(() => {
+
+                console.log(
+                    "Pulsa el botón de música para iniciar el audio."
+                );
+
+            });
 
 
-        universe.classList.add(
-            "show"
-        );
-
+        /* ==========================================
+           🌌 PREPARAMOS LA GALAXIA
+        ========================================== */
 
         crearMensajes();
 
         crearFotos();
+
+
+        /* ==========================================
+           🚀 DESPUÉS DEL ZOOM APARECE LA GALAXIA
+        ========================================== */
+
+        setTimeout(() => {
+
+            intro.classList.add("hide");
+
+            universe.classList.add("show");
+
+            zoomObjetivo = 1.35;
+
+
+            setTimeout(() => {
+
+                zoomObjetivo = 1;
+
+            }, 3000);
+
+
+        }, 1200);
+
+    }
+);
 
 
         /* ==========================================
