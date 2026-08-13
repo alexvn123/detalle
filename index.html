@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Para ti ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PANTALLA INICIAL
+===================================================== -->
+
+<section id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-subtitle">
+            UNA HISTORIA ENTRE ESTRELLAS
+        </div>
+
+        <h1>
+            Para ti
+        </h1>
+
+        <div class="intro-line"></div>
+
+        <p class="intro-text">
+
+            Hay personas que llegan por casualidad...
+            <br>
+
+            y terminan convirtiéndose en nuestro universo.
+
+        </p>
+
+
+        <button id="enterButton">
+
+            <span>Entrar a mi universo</span>
+
+            <b>→</b>
+
+        </button>
+
+
+        <div class="headphones">
+
+            Ponte los audífonos · Sube el volumen
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     UNIVERSO
+===================================================== -->
+
+<section id="universe">
+
+    <canvas id="galaxyCanvas"></canvas>
+
+
+    <!-- Luz ambiental -->
+
+    <div class="ambient-light"></div>
+
+
+    <!-- =================================================
+         MENSAJES FLOTANTES
+    ================================================== -->
+
+    <div id="floatingMessages"></div>
+
+
+    <!-- =================================================
+         FOTOS
+    ================================================== -->
+
+    <div id="photoWorld"></div>
+
+
+    <!-- =================================================
+         TÍTULO CENTRAL
+    ================================================== -->
+
+    <div class="center-title">
+
+        <div class="center-small">
+            MI UNIVERSO
+        </div>
+
+        <div class="center-name">
+            Para ti
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         FRASE PRINCIPAL
+    ================================================== -->
+
+    <div id="mainPhrase">
+
+        <span></span>
+
+    </div>
+
+
+    <!-- =================================================
+         CONTROLES
+    ================================================== -->
+
+    <div class="controls">
+
+        <button id="previousButton">
+            ‹
+        </button>
+
+        <div class="counter">
+
+            <span id="currentNumber">
+                01
+            </span>
+
+            <i>/</i>
+
+            <span id="totalNumber">
+                06
+            </span>
+
+        </div>
+
+        <button id="nextButton">
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         BOTÓN MÚSICA
+    ================================================== -->
+
+    <button
+        id="musicButton"
+        class="music-button"
+        aria-label="Música"
+    >
+
+        ♪
+
+    </button>
+
+
+    <!-- =================================================
+         MENSAJE FINAL
+    ================================================== -->
+
+    <div id="finalScene">
+
+        <div class="final-subtitle">
+
+            Y SI FUE DESTINO...
+
+        </div>
+
+        <div class="final-title">
+
+            TE ELEGIRÍA<br>
+
+            OTRA VEZ.
+
+        </div>
+
+        <div class="final-name">
+
+            — Kerly ❤️
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         AUDIO
+    ================================================== -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="assets/audio/Camilo - Vida de Rico (Official Video).mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
