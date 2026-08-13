@@ -117,7 +117,7 @@ const FOTOS = [
 
 const MENSAJES = [
 
-    "kerly 💕"
+    "Ariana 💕",
 
     "Quizás fue destino...",
 
