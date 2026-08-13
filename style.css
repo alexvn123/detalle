@@ -626,32 +626,34 @@ body {
 /* =====================================================
    TÍTULO CENTRAL
 ===================================================== */
+
 .center-title {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20; /* Lo ponemos encima de todo */
+    z-index: 10; /* 🔹 Menor que el z-index de las fotos (15), así queda detrás */
     text-align: center;
     pointer-events: none;
-    opacity: 1; /* Quitamos la opacidad baja */
+    opacity: 0.9;
 }
 
 .center-small {
-    color: #ffd7f0; /* Más brillante */
-    font-family: Arial, sans-serif;
-    font-size: clamp(13px, 2.5vw, 18px);
-    letter-spacing: 10px;
-    text-shadow: 0 0 12px #ff88dd, 0 0 25px #ff44bb; /* Brillo suave */
+    color: #ffcceb; /* Rosa suave luminoso */
+    font-family: 'Segoe Script', 'Brush Script MT', cursive; /* Estilo manuscrita */
+    font-size: clamp(12px, 2.2vw, 16px);
+    letter-spacing: 9px;
+    text-shadow: 0 0 8px #ff88cc, 0 0 20px #ff44aa;
 }
 
 .center-name {
     margin-top: 12px;
-    color: #ffffff; /* Blanco puro */
-    font-size: clamp(50px, 11vw, 110px);
-    letter-spacing: 15px;
-    font-weight: bold;
-    text-shadow: 0 0 15px #ff44bb, 0 0 35px #ff22aa, 0 0 60px #ff0088; /* Brillo fuerte */
+    color: #ffb3e6; /* Rosa más brillante */
+    font-family: 'Segoe Script', 'Brush Script MT', cursive; /* Manuscrita */
+    font-size: clamp(55px, 12vw, 120px);
+    letter-spacing: 14px;
+    font-weight: normal;
+    text-shadow: 0 0 12px #ff66cc, 0 0 30px #ff33aa, 0 0 50px #ff0088;
 }
 
 /* =====================================================
